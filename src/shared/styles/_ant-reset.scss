@@ -1,0 +1,25 @@
+.ant-dropdown-menu-submenu-title {
+  padding: 5px 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  column-gap: 20px;
+
+  > .ant-dropdown-menu-title-content {
+    text-align: right;
+  }
+
+  > .ant-dropdown-menu-submenu-expand-icon {
+    transform: rotate(180deg);
+    position: static !important;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ant-dropdown-menu-item {
+  > .ant-dropdown-menu-title-content {
+    text-align: right;
+  }
+}

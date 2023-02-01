@@ -1,0 +1,78 @@
+@use 'sass:map';
+
+/**
+ * $infix?: max | min
+ * $breakpoint: sm-phone | phone | lg-phone | tablet | desktop | lg-desktop
+                xs       | sm    | md       | lg     | xl      | xxl
+                0        | 576   | 768      | 992    | 1200    | 1400
+**/
+@mixin respect($breakpoint, $infix: max) {
+  $breakpoint: translate-breakpoint-name($breakpoint);
+  $point: map.get($breakpoints, #{$breakpoint});
+
+  @if $infix == 'max' {
+    $point: $point - 0.02;
+  }
+
+  @media screen and (#{$infix}-width: #{$point}px) {
+    @content;
+  }
+}
+
+// $breakpoint: same as the 'respect' mixin first arg ($breakpoint)
+@mixin respect-only($breakpoint) {
+  $breakpoint: translate-breakpoint-name($breakpoint);
+  $min: min-breakpoint($breakpoint);
+  $next: next-breakpoint($breakpoint);
+  $max: max-breakpoint($next);
+
+  @if $min != null and $max != null {
+    @media (min-width: ($min + 'px')) and (max-width: ($max + 'px')) {
+      @content;
+    }
+  } @else if $max == null {
+    @include respect($breakpoint, min) {
+      @content;
+    }
+  } @else if $min == null {
+    @include respect($next, max) {
+      @content;
+    }
+  }
+}
+
+/**
+ * $lower: same as the 'respect' mixin first arg ($breakpoint)
+ * $upper: same as the 'respect' mixin first arg ($breakpoint)
+**/
+@mixin respect-between($lower, $upper) {
+  $lower: translate-breakpoint-name($lower);
+  $upper: translate-breakpoint-name($upper);
+  $min: min-breakpoint($lower);
+  $max: max-breakpoint($upper);
+
+  @if $min != null and $max != null {
+    @media (min-width: ($min + 'px')) and (max-width: ($max + 'px')) {
+      @content;
+    }
+  } @else if $max == null {
+    @include respect($lower, min) {
+      @content;
+    }
+  } @else if $min == null {
+    @include respect($upper, max) {
+      @content;
+    }
+  }
+}
+
+@mixin map-respect($property, $settings, $infix: max) {
+  $bps: map-keys($settings);
+
+  @each $bp in $bps {
+    $value: map.get($settings, $bp);
+    @include respect($bp, $infix) {
+      #{$property}: $value;
+    }
+  }
+}

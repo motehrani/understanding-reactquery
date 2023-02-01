@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
+
+const withAntdLess = require('next-plugin-antd-less');
+
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  reactStrictMode: false,
+  swcMinify: true,
+  lessVarsFilePath: './src/shared/styles/_ant.less',
+  lessVarsFilePathAppendToEndOfContent: false,
+  pageExtensions: ['page.tsx'],
 }
 
-module.exports = nextConfig
+module.exports = withAntdLess(nextConfig)
