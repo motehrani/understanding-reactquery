@@ -9,7 +9,6 @@
 
 body {
   margin: 0;
-  direction: rtl;
   background: var(--background) !important;
 
   h2 {
@@ -44,6 +43,7 @@ img {
   --hover-main: #a58fff;
   --input: rgb(232, 232, 232);
   --input-color: rgb(66, 66, 66);
+  --main-t05: rgba(152, 128, 250, 0.05);
   --main-t1: rgba(152, 128, 250, 0.1);
   --main-t2: rgba(152, 128, 250, 0.2);
   --main-t3: rgba(152, 128, 250, 0.3);
@@ -64,17 +64,17 @@ img {
   --positive-t8: rgba(255, 255, 255, 0.8);
   --positive-t9: rgba(255, 255, 255, 0.9);
   --positive: white;
-  --opposite-t05: rgba(0, 0, 0, 0.05);
-  --opposite-t1: rgba(0, 0, 0, 0.1);
-  --opposite-t2: rgba(0, 0, 0, 0.2);
-  --opposite-t3: rgba(0, 0, 0, 0.3);
-  --opposite-t4: rgba(0, 0, 0, 0.4);
-  --opposite-t5: rgba(0, 0, 0, 0.5);
-  --opposite-t6: rgba(0, 0, 0, 0.6);
-  --opposite-t7: rgba(0, 0, 0, 0.7);
-  --opposite-t8: rgba(0, 0, 0, 0.8);
-  --opposite-t9: rgba(0, 0, 0, 0.9);
-  --opposite: black;
+  --negative-t05: rgba(0, 0, 0, 0.05);
+  --negative-t1: rgba(0, 0, 0, 0.1);
+  --negative-t2: rgba(0, 0, 0, 0.2);
+  --negative-t3: rgba(0, 0, 0, 0.3);
+  --negative-t4: rgba(0, 0, 0, 0.4);
+  --negative-t5: rgba(0, 0, 0, 0.5);
+  --negative-t6: rgba(0, 0, 0, 0.6);
+  --negative-t7: rgba(0, 0, 0, 0.7);
+  --negative-t8: rgba(0, 0, 0, 0.8);
+  --negative-t9: rgba(0, 0, 0, 0.9);
+  --negative: black;
 }
 
 [data-theme='dark'] {
@@ -84,6 +84,7 @@ img {
   --hover-main: #5c33ff;
   --input: rgb(66, 66, 66);
   --input-color: rgb(232, 232, 232);
+  --main-t05: rgba(117, 86, 252, 0.05);
   --main-t1: rgba(117, 86, 252, 0.1);
   --main-t2: rgba(117, 86, 252, 0.2);
   --main-t3: rgba(117, 86, 252, 0.3);
@@ -104,15 +105,15 @@ img {
   --positive-t8: rgba(0, 0, 0, 0.8);
   --positive-t9: rgba(0, 0, 0, 0.9);
   --positive: black;
-  --opposite-t05: rgba(255, 255, 255, 0.05);
-  --opposite-t1: rgba(255, 255, 255, 0.1);
-  --opposite-t2: rgba(255, 255, 255, 0.2);
-  --opposite-t3: rgba(255, 255, 255, 0.3);
-  --opposite-t4: rgba(255, 255, 255, 0.4);
-  --opposite-t5: rgba(255, 255, 255, 0.5);
-  --opposite-t6: rgba(255, 255, 255, 0.6);
-  --opposite-t7: rgba(255, 255, 255, 0.7);
-  --opposite-t8: rgba(255, 255, 255, 0.8);
-  --opposite-t9: rgba(255, 255, 255, 0.9);
-  --opposite: white;
+  --negative-t05: rgba(255, 255, 255, 0.05);
+  --negative-t1: rgba(255, 255, 255, 0.1);
+  --negative-t2: rgba(255, 255, 255, 0.2);
+  --negative-t3: rgba(255, 255, 255, 0.3);
+  --negative-t4: rgba(255, 255, 255, 0.4);
+  --negative-t5: rgba(255, 255, 255, 0.5);
+  --negative-t6: rgba(255, 255, 255, 0.6);
+  --negative-t7: rgba(255, 255, 255, 0.7);
+  --negative-t8: rgba(255, 255, 255, 0.8);
+  --negative-t9: rgba(255, 255, 255, 0.9);
+  --negative: white;
 }

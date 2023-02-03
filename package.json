@@ -14,6 +14,8 @@
     "prettify:write": "npx prettier --write ."
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.24.4",
+    "@tanstack/react-query-devtools": "^4.24.4",
     "antd": "^4.24.2",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.3",
@@ -22,10 +24,7 @@
     "next-plugin-antd-less": "^1.8.0",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-query": "^3.39.2",
-    "reactstrap": "^9.1.5",
-    "recoil": "^0.7.6"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.11.9",

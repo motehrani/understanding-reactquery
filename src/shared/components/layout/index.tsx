@@ -1,5 +1,3 @@
-import { Container } from 'reactstrap'
-
 export interface LayoutProps {
   children: React.ReactNode
 }
@@ -7,9 +5,7 @@ export interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="page-layout">
-      <div className="page-content">
-        <Container>{children}</Container>
-      </div>
+      <div className="page-content">{children}</div>
     </div>
   )
 }
