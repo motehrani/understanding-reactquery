@@ -1,22 +1,17 @@
 import axios from 'axios'
 
 type Prp = {
-  id: number
+  id: string
 }
 
 export function getPosts() {
   return axios
-    .get('https://63dfa6ff8b24964ae0f16edb.mockapi.io/api/v1/comments', {
-      params: { _sort: 'comment' },
-      // without this params it wont work... and what this doing anyway?
-    })
+    .get('https://63dfa6ff8b24964ae0f16edb.mockapi.io/api/v1/comments')
     .then(res => res.data)
 }
 export function getUsers({ id }: Prp) {
   return axios
-    .get('https://63dfa6ff8b24964ae0f16edb.mockapi.io/api/v1/comments', {
-      params: { id: { id } },
-    })
+    .get(`https://63dfa6ff8b24964ae0f16edb.mockapi.io/api/v1/comments?id=${id}`)
     .then(res => res.data)
 }
 

@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <button onClick={() => setCurrentPage(<PostList1 />)}>Post List 1</button>
       <button onClick={() => setCurrentPage(<PostList2 />)}>Post List 2</button>
-      <button onClick={() => setCurrentPage(<Post id="2" />)}>
+      <button onClick={() => setCurrentPage(<Post id="4" />)}>
         First Post
       </button>
       <br />

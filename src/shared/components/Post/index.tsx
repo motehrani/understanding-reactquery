@@ -3,7 +3,7 @@ import { type } from 'os'
 import { getUsers } from 'public/api/post'
 
 type Prp = {
-  id: number
+  id: string
 }
 
 export default function Post({ id }: Prp) {
@@ -33,7 +33,7 @@ export default function Post({ id }: Prp) {
             : useQuery.data.first_name} */}
         </small>
       </h1>
-      <p>{postQuery.data.body}</p>
+      {/* <p>{postQuery.data.body}</p> */}
     </>
   )
 }
